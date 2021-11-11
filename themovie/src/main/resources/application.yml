@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+
+exchange:
+  name: movie-exchange
+  routingKeys:
+    input: movie
+    detail: movie.details
+    error: movie.error
+  queues:
+    input: q-movie-input
+    detail: q-movie-details
+    error: q-movie-error
+
+omdb:
+  search: http://www.omdbapi.com/?i=tt3896198&apikey=52d1c7f&t=
